@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Johannes Zilg &middot; Front End Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Johannes Zilg - Responsive Front End Developer from Berlin, Germany">
+    <meta name="theme-color" content="#333333">
+    <style>
+
+        @-ms-viewport {
+        	width: device-width;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            font: 1em/1.5 "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+            color: #333;
+            text-rendering: optimizelegibility;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-width: 215px;
+        }
+
+        main {
+        	display: block;
+        }
+
+        [tabindex="-1"]:focus {
+        	outline: none !important;
+        }
+
+        a {
+            display: inline-block;
+        	background: transparent;
+            color: #2471A3;
+            touch-action: manipulation;
+        }
+
+        a:focus {
+        	outline: thin dotted #333;
+        	outline: 5px auto -webkit-focus-ring-color;
+        	outline-offset: -2px;
+        }
+
+        a:active,
+        a:hover {
+        	outline: 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        h1, h2 {
+            font-weight: normal;
+        }
+
+        h1 {
+            font-size: 10vw;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 3em;
+            text-align: center;
+            margin: .5em 0;
+        }
+
+        .header--h2 {
+            margin: 0;
+            font-size: 6vw;
+            color: #AAA;
+        }
+
+        .container {
+            display: flex;
+            padding: 0 5%;
+            position: relative;
+            min-height: 100%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container + .container,
+        footer {
+            border-top: 1px solid #CCC;
+        }
+
+        .html-5-logo {
+            width: 2em;
+            height: 2em;
+            vertical-align: middle;
+        }
+
+        .down-arrow {
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            margin: 0 auto;
+            background: rgba(0,0,0,.25);
+            border-radius: 99px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 24px;
+            color: #FFF;
+        }
+
+        .projects-container  {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;;
+        }
+
+        @media only screen and (min-width: 30em) {
+            .projects-container {
+                flex-direction: row;
+            }
+        }
+
+        .project-container  {
+            padding: 0 1%;
+            margin-bottom: .75em;
+        }
+
+        .project {
+            height: 100%;
+            padding: 10%;
+            background: #EEE;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 30em) {
+            .project-container  {
+                flex-basis: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 71.25em) {
+            .project-container  {
+                flex-basis: 25%;
+            }
+        }
+
+        .project__title {
+            margin-bottom: 1em;
+        }
+
+        .project__discription {
+            margin: 0;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1em 5%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Johannes Zilg</h1>
+            <h2 class="header--h2">Front End Developer</h2>
+            <a id="down-arrow" class="down-arrow" href="#about">&darr;</a>
+        </header>
+    </div>
+    <div id="about" class="container">
+        <article>
+            <section>
+                <h2>About me</h2>
+                <p>
+                    Hi I am Johannes, passionated Front End Developer from Berlin, Germany.
+                </p>
+                <p>
+                    I create Web-Frontend with good structred <strong>HTML</strong>,
+                    clean <strong>CSS</strong>, and high performing <strong>JavaScript</strong>.<br>
+                    As a fan of <a href="https://www.fsf.org/" target="_blank">free Software</a>
+                    I love to work on GNU/Linux-Systems with <a href="https://www.gnome.org/" target="_blank">Gnome Desktop</a>.
+                </p>
+                <p>
+                    Currently I am working for <a href="http://www.tausendkind.de" title="tausendkind.de">tausendkind</a> in Berlin.
+                </p>
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>
+                        Styling
+                        <ul>
+                            <li>CSS3</li>
+                            <li>Less</li>
+                            <li>BEM</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Javascript
+                        <ul>
+                            <li>Vanilla JS</li>
+                            <li>jQuery</li>
+                            <li>angularJS</li>
+                            <li>Gulp</li>
+                        </ul>
+                    </li>
+                    <li>a little bit PHP</li>
+                    <li>and of cause git</li>
+                </ul>
+            </section>
+        </article>
+    </div>
+    <div id="projects" class="container">
+        <article>
+            <h2>Projects</h2>
+            <ul class="projects-container">
+                <li class="project-container">
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="https://github.com/jzilg/frontend_base" target="_blank">
+                                <strong>Frontend Base</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            lightweight CSS- and JS-Base for your Homepage.
+                        </dd>
+                    </dl>
+                </li>
+                <li class="project-container">
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="https://github.com/jzilg/lazyAttr" target="_blank">
+                                <strong>lazyAttr</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            is a lightweight (minified 1kb) jQuery-Plugin for
+                            lazy-loading any kind of attribute, when it is entering the
+                            viewport. Specially usefull for attributes that load stuff
+                            like src, srcset or whatever you prefer.
+                        </dd>
+                    </dl>
+                </li>
+                <li class="project-container">
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="https://github.com/jzilg/fancy_sidebar" target="_blank">
+                                <strong>Fancy Sidebar</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            A modern Sidebar with integrated Navigation with seprate
+                            Toggle-Buttons
+                        </dd>
+                    </dl>
+                </li>
+                <li class="project-container">
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="https://github.com/jzilg/fancy_form" target="_blank">
+                                <strong>Fancy Form</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            a modern Design for Forms with Placeholder inside the
+                            inputs, which do not disappear when entering data
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </article>
+    </div>
+    <footer>
+        <span>Desigend and Develop by me with &hearts;</span>
+        <svg class="html-5-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
+            <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
+            <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+            <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+        </svg>
+        <span>
+            Johannes Zilg - 2016
+        </span>
+    </footer>
+</body>
+</html>
