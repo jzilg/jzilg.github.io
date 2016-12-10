@@ -10,7 +10,7 @@
     <style>
 
         @-ms-viewport {
-        	width: device-width;
+            width: device-width;
         }
 
         *,
@@ -41,29 +41,30 @@
         }
 
         main {
-        	display: block;
+            display: block;
         }
 
         [tabindex="-1"]:focus {
-        	outline: none !important;
+            outline: none !important;
         }
 
         a {
             display: inline-block;
-        	background: transparent;
+            background: transparent;
             color: #2471A3;
-            touch-action: manipulation;
+            -ms-touch-action: manipulation;
+                touch-action: manipulation;
         }
 
         a:focus {
-        	outline: thin dotted #333;
-        	outline: 5px auto -webkit-focus-ring-color;
-        	outline-offset: -2px;
+            outline: thin dotted #333;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
         }
 
         a:active,
         a:hover {
-        	outline: 0;
+            outline: 0;
         }
 
         strong {
@@ -92,12 +93,21 @@
         }
 
         .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding: 0 5%;
             position: relative;
             min-height: 100%;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
@@ -128,23 +138,24 @@
             color: #FFF;
         }
 
-        .projects-container  {
+        .projects-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin: 0;
             padding: 0;
             list-style: none;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -ms-flex-pack: distribute;
             justify-content: space-around;;
         }
 
-        @media only screen and (min-width: 30em) {
-            .projects-container {
-                flex-direction: row;
-            }
-        }
-
-        .project-container  {
+        .project-container {
             padding: 0 1%;
             margin-bottom: .75em;
         }
@@ -158,18 +169,6 @@
             text-align: center;
         }
 
-        @media only screen and (min-width: 30em) {
-            .project-container  {
-                flex-basis: 50%;
-            }
-        }
-
-        @media only screen and (min-width: 71.25em) {
-            .project-container  {
-                flex-basis: 25%;
-            }
-        }
-
         .project__title {
             margin-bottom: 1em;
         }
@@ -179,10 +178,36 @@
         }
 
         footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             padding: 1em 5%;
+        }
+
+        @media only screen and (min-width: 30em) {
+            .projects-container {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+
+            .project-container {
+                -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 71.25em) {
+            .project-container  {
+                -ms-flex-preferred-size: 25%;
+                flex-basis: 25%;
+            }
         }
 
     </style>
@@ -197,45 +222,44 @@
     </div>
     <div id="about" class="container">
         <article>
-            <section>
-                <h2>About me</h2>
-                <p>
-                    Hi I am Johannes, passionated Front End Developer from Berlin, Germany.
-                </p>
-                <p>
-                    I create Web-Frontend with good structred <strong>HTML</strong>,
-                    clean <strong>CSS</strong>, and high performing <strong>JavaScript</strong>.<br>
-                    As a fan of <a href="https://www.fsf.org/" target="_blank">free Software</a>
-                    I love to work on GNU/Linux-Systems with <a href="https://www.gnome.org/" target="_blank">Gnome Desktop</a>.
-                </p>
-                <p>
-                    Currently I am working for <a href="http://www.tausendkind.de" title="tausendkind.de">tausendkind</a> in Berlin.
-                </p>
-                <h3>Skills</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>
-                        Styling
-                        <ul>
-                            <li>CSS3</li>
-                            <li>Less</li>
-                            <li>BEM</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Javascript
-                        <ul>
-                            <li>Vanilla JS</li>
-                            <li>jQuery</li>
-                            <li>angularJS</li>
-                            <li>Gulp</li>
-                        </ul>
-                    </li>
-                    <li>a little bit PHP</li>
-                    <li>and of cause git</li>
-                </ul>
-            </section>
+            <h2>About me</h2>
+            <p>
+                Hi I am Johannes, passionated Front End Developer from Berlin, Germany.
+            </p>
+            <p>
+                I create Web-Frontend with good structred <strong>HTML</strong>,
+                clean <strong>CSS</strong>, and high performing <strong>JavaScript</strong>.<br>
+                As a fan of <a href="https://www.fsf.org/" target="_blank">free Software</a>
+                I love to work on GNU/Linux-Systems with <a href="https://www.gnome.org/" target="_blank">Gnome Desktop</a>.
+            </p>
+            <p>
+                Currently I am working for <a href="http://www.tausendkind.de" title="tausendkind.de">tausendkind</a> in Berlin.
+            </p>
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>
+                    Styling
+                    <ul>
+                        <li>CSS3</li>
+                        <li>Flexbox</li>
+                        <li>Less</li>
+                        <li>BEM</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </li>
+                <li>
+                    JavaScript
+                    <ul>
+                        <li>Vanilla JS</li>
+                        <li>jQuery</li>
+                        <li>angularJS</li>
+                        <li>Gulp</li>
+                    </ul>
+                </li>
+                <li>a little bit PHP</li>
+                <li>and of cause git</li>
+            </ul>
         </article>
     </div>
     <div id="projects" class="container">
@@ -299,16 +323,14 @@
         </article>
     </div>
     <footer>
-        <span>Desigend and Develop by me with &hearts;</span>
+        <span>Desigend and developed by me with &hearts;</span>
         <svg class="html-5-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
             <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
             <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
             <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
         </svg>
-        <span>
-            Johannes Zilg - 2016
-        </span>
+        <span>Johannes Zilg - 2016</span>
     </footer>
 </body>
 </html>
