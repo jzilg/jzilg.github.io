@@ -18,7 +18,8 @@ body {
 }
 
 html {
-    font: 1em/1.5 "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
     color: #333;
     text-rendering: optimizelegibility;
     -webkit-tap-highlight-color: transparent;
