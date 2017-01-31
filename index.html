@@ -7,253 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Johannes Zilg - Responsive Front End Developer from Berlin, Germany">
     <meta name="theme-color" content="#333333">
-    <style>
-
-        @-ms-viewport {
-            width: device-width;
-        }
-
-        *, *:before, *:after {
-            box-sizing: border-box;
-        }
-
-        [tabindex="-1"]:focus {
-            outline: none !important;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        html {
-            line-height: 1.5;
-            font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, sans-serif;
-            color: #333;
-            text-rendering: optimizelegibility;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-
-        body {
-            min-width: 215px;
-            margin: 0;
-        }
-
-        main {
-            display: block;
-        }
-
-        hr {
-            height: 0;
-            margin: 0;
-            border-bottom: 0;
-            border-color: #CCC;
-            border-style: solid;
-        }
-
-        a {
-            display: inline-block;
-            background: transparent;
-            color: #2471A3;
-            -webkit-transition: color 0.2s, background-color 0.2s;
-            transition: color 0.2s, background-color 0.2s;
-            -ms-touch-action: manipulation;
-            touch-action: manipulation;
-        }
-
-        a:active {
-            background-color: #34495e;
-            color: #FFF;
-        }
-
-        a:focus {
-            outline: thin dotted #333;
-            outline: 5px auto -webkit-focus-ring-color;
-            outline-offset: -2px;
-        }
-
-        a:active, a:hover {
-            outline: 0;
-        }
-
-        strong {
-            font-weight: bold;
-        }
-
-        h1, h2 {
-            font-weight: normal;
-        }
-
-        h1 {
-            font-size: 10vw;
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 3em;
-            text-align: center;
-            margin: 0 0 .5em;
-        }
-
-        .header--h2 {
-            margin: 0;
-            font-size: 6vw;
-            color: #AAA;
-        }
-
-        .container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            padding: 2em 5%;
-            position: relative;
-            min-height: 100%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-
-        .down-arrow {
-            position: absolute;
-            bottom: 5%;
-            left: 0;
-            right: 0;
-            width: 45px;
-            height: 45px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.25);
-            border-radius: 99px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 24px;
-            color: #FFF;
-        }
-
-        .projects-container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -ms-flex-pack: distribute;
-            justify-content: space-around;
-        }
-
-        .project-container {
-            padding: 0 1%;
-            margin-bottom: .75em;
-        }
-
-        .project {
-            height: 100%;
-            padding: 10%;
-            background: #EEE;
-            border: 1px solid #CCC;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .project__title {
-            margin-bottom: .5em;
-        }
-
-        .project__btn {
-            display: inline-block;
-            padding: .5em;
-        }
-
-        .project__discription {
-            margin: 0;
-        }
-
-        footer {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            padding: 1em 5%;
-            text-align: center;
-        }
-
-        .html-5-logo {
-            width: 2em;
-            height: 2em;
-            margin-top: .5em;
-        }
-
-        @media only screen and (min-width: 30em) {
-            .projects-container {
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-            }
-            .project-container {
-                -ms-flex-preferred-size: 50%;
-                flex-basis: 50%;
-            }
-            footer {
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                text-align: left;
-            }
-            .html-5-logo {
-                margin-top: 0;
-            }
-        }
-
-        @media only screen and (min-width: 71.25em) {
-            a:hover {
-                background-color: #34495e;
-                color: #FFF;
-            }
-            .project-container {
-                -ms-flex-preferred-size: 25%;
-                flex-basis: 25%;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="container">
-        <h1>Johannes Zilg</h1>
-        <h2 class="header--h2">Front End Developer</h2>
-        <a id="down-arrow" class="down-arrow" href="#about" title="Scroll down">&darr;</a>
+        <div class="hidden-until-scroll">
+            <h1>Johannes Zilg</h1>
+            <h2 class="header--h2">Front End Developer</h2>
+            <a id="down-arrow" class="down-arrow" href="#about" title="Scroll down">&darr;</a>
+        </div>
     </header>
     <hr>
     <div id="about" class="container">
-        <article>
+        <article class="hidden-until-scroll">
             <h2>About me</h2>
             <p>
                 Hi I am Johannes, passionated Front End Developer from Berlin, Germany.
@@ -296,7 +62,7 @@
     </div>
     <hr>
     <div id="projects" class="container">
-        <article>
+        <article class="hidden-until-scroll">
             <h2>Projects</h2>
             <ul class="projects-container">
                 <li class="project-container">
@@ -365,6 +131,33 @@
             <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
         </svg>
     </footer>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        (function() {
+            var scrollMagicController = new ScrollMagic.Controller();
+
+            $('.hidden-until-scroll').each(function() {
+
+                this.scrollMagicscene = new ScrollMagic.Scene({
+                    triggerElement: this,
+                    reverse: false
+                })
+                .setClassToggle(this, 'hidden-until-scroll--show')
+                .addTo(scrollMagicController);
+            });
+        })();
+
+        (function($roots, $target) {
+            $('#down-arrow').click(scrollToFirstArticle);
+
+            function scrollToFirstArticle() {
+                $roots.animate({
+                    scrollTop: ($target.offset().top)
+                }, 999);
+            }
+        })($('html, body'), $('#about'));
+    </script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
