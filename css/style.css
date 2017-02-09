@@ -100,6 +100,10 @@ h2 {
     opacity: 1;
 }
 
+.font-red {
+    color: #cb4335;
+}
+
 .container {
     display: -webkit-box;
     display: -ms-flexbox;
