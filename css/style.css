@@ -177,7 +177,8 @@ h2 {
 
 .project__btn {
     display: inline-block;
-    padding: .5em;
+    padding: .5em 1em;
+    border-radius: 5px;
 }
 
 .project__discription {
