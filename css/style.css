@@ -100,6 +100,10 @@ h2 {
     opacity: 1;
 }
 
+.font-red {
+    color: #cb4335;
+}
+
 .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -171,7 +175,8 @@ h2 {
 
 .project__btn {
     display: inline-block;
-    padding: .5em;
+    padding: .5em 1em;
+    border-radius: 5px;
 }
 
 .project__discription {
