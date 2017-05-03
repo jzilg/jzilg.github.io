@@ -39,10 +39,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Modal Demo</h1>
-        <p>
-            Requiremens:
-        </p>
+        <h1>jQuery - Modal</h1>
+        <ul>
+            <li><a href="https://github.com/jzilg/modal" title="see on GitHub" target="_blank">Source</a></li>
+            <li><a href="#requiremens">Requiremens</a></li>
+            <li><a href="#demos">Demos</a></li>
+            <li><a href="#api">Api</a></li>
+        </ul>
+        <h2 id="requiremens">Requiremens</h2>
         <ul>
             <li><a href="https://jquery.com/download/" title="jQuery Download" target="_blank">jQuery</a></li>
             <li>modal.js</li>
@@ -50,7 +54,8 @@
 <pre><code>&lt;script src="jquery.js"&gt;&lt;/script&gt;
 &lt;script src="modal.js"&gt;&lt;/script&gt;</code></pre>
         <hr>
-        <h2>Modal with static content</h2>
+        <h2 id="demos">Demos</h2>
+        <h3>Modal with static content</h3>
         <button id="demo-btn-default" class="btn btn-filled btn-blue">
             Open Modal
         </button>
@@ -69,7 +74,7 @@
         afterModalClose: (modal)=> console.log('afterClose', modal)
     });
 });</code></pre>
-        <h2>Modal with ajax-loaded resource</h2>
+        <h3>Modal with ajax-loaded resource</h3>
         <button id="demo-btn-ajax" class="btn btn-filled btn-blue">
             Ajax-Call
         </button>
@@ -78,7 +83,7 @@
         contentUrl: 'ajax-content.html'
     });
 });</code></pre>
-        <h2>Modal for Youtube-Video</h2>
+        <h3>Modal for Youtube-Video</h3>
         <button id="demo-btn-youtube" class="btn btn-filled btn-blue">
             Yotube
         </button>
@@ -89,7 +94,7 @@
 });</code></pre>
         <hr>
         <article>
-            <h2>Api</h2>
+            <h2 id="api">Api</h2>
             <section>
             <h3>content</h3>
                 <p>content to show initial</p>
