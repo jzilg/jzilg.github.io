@@ -16,3 +16,6 @@ composer.lock
 /.settings/
 /.project
 /.buildpath
+
+# Apple stuff
+.DS_Store
