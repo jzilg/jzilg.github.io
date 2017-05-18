@@ -2,6 +2,7 @@
     'use strict';
     
     var $document = $(document);
+    var $roots = $('html, body');
     var $menuDropdown = $('#menu-dropdown');
     var $menuBtn = $('#menu-btn');
     var $contents = $('.content');
@@ -11,6 +12,7 @@
     function init() {
         if (window.location.hash == '') {
             window.location.hash = initHastag;
+            $roots.scrollTop();
         }
         toggleContent(window.location.hash, 0);
         bindMenu();
