@@ -41,6 +41,16 @@ p + p {
     @media @sm {
         font-size: 40px;
     }
+
+    &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #AAA;
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .page-header--h2 {
@@ -50,13 +60,6 @@ p + p {
     @media @sm {
         font-size: 22px;
     }
-}
-
-.page-header__hr {
-    border-color: #AAA;
-    margin-right: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .menu {
