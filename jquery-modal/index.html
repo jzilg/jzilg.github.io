@@ -351,10 +351,11 @@
 
         $('h2, h3').each(function() {
             var $this = $(this);
+            var id = $this.html().replace(' ', '-').toLocaleLowerCase();
             var $li = $('<li>')
             var $link = $('<a>', {
-                href: '#' + $this.html().toLocaleLowerCase(),
-                title: $this.html().toLocaleLowerCase(),
+                href: '#' + id,
+                title: $this.html(),
             }).text($this.html());
 
             $li.append($link);
@@ -371,6 +372,8 @@
                 oldUl.wasH3 = false;
                 $toc.append($li);
             }
+
+            $this.attr('id', id);
         });
         
 
