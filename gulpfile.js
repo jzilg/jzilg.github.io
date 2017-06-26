@@ -9,9 +9,8 @@ const gulp      = require('gulp'),
 /* Less to CSS
 ==============================================================================*/
 
-const cssDest  = 'style/css/';
-const lessDest = 'style/less/';
-const srcFile = lessDest + 'style.less';
+const srcFile = 'style/style.less';
+const cssDist = 'style/';
 
 gulp.task('css', function() {
     return gulp.src(srcFile)
@@ -30,5 +29,5 @@ gulp.task('css', function() {
         .pipe(cmq({
             log: false
         }))
-        .pipe(gulp.dest(cssDest));
+        .pipe(gulp.dest(cssDist));
 });
