@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    
+
     var $document = $(document);
     var $menuDropdown = $('#menu-dropdown');
     var $menuBtn = $('#menu-btn');
@@ -12,6 +12,7 @@
         if (window.location.hash == '') {
             window.location.hash = initHastag;
             window.scrollTo(0, 0);
+            $('html, body').scrollTop(0);
         }
         toggleContent(window.location.hash, 0);
         bindMenu();
@@ -25,7 +26,7 @@
     function menuLinkClickHandler(event) {
         event.preventDefault();
         var targetHashtag = event.target.hash;
-        
+
         if (targetHashtag !== window.location.hash) {
             window.location.hash = targetHashtag;
             toggleContent(targetHashtag);
