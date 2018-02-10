@@ -9,7 +9,7 @@
     var menuIsActive = false;
 
     function init() {
-        if (window.location.hash == '') {
+        if (window.location.hash === '') {
             window.location.hash = initHastag;
             window.scrollTo(0, 0);
             $('html, body').scrollTop(0);
