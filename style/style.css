@@ -8,6 +8,7 @@ p + p {
 }
 
 .page-main {
+	-webkit-box-flex: 1;
 	-ms-flex-positive: 1;
 	flex-grow: 1;
 }
@@ -75,6 +76,7 @@ p + p {
 	position: relative;
 	border-top: 1px solid #333;
 	margin: 8px 5px;
+	-webkit-transition: -webkit-transform .2s;
 	transition: -webkit-transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
@@ -87,6 +89,7 @@ p + p {
 	width: 200px;
 	padding: 10px;
 	background-color: #FFF;
+	-webkit-box-shadow: 0px 0px 5px 0px #AAA;
 	box-shadow: 0px 0px 5px 0px #AAA;
 	z-index: 1;
 }
@@ -129,10 +132,14 @@ p + p {
 }
 
 .page-footer {
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
@@ -153,8 +160,11 @@ p + p {
 }
 
 .page-footer {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	-ms-flex-wrap: wrap;
