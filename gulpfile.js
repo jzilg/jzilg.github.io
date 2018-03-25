@@ -25,5 +25,5 @@ gulp.task('css', () => gulp.src(srcFile)
 )
 
 gulp.task('watch', () => {
-    gulp.watch(srcFile, ['css']);
+    gulp.watch(srcFile, ['css'])
 })
