@@ -7,23 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Homepage of Johannes Zilg. Frontend Developer from Berlin, Germany. Modern web frontend build with HTML, CSS, JavaScript, SVG, Bash and git.">
     <link rel="icon" href="./images/favicon.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="./style/jzilg.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.min.css">
     <base href="https://jzilg.github.io">
 </head>
 <body>
     <div class="container">
-        <header class="page-header flex flex-items-xs-between flex-items-xs-middle">
-            <div class="iblock">
-                <h1 class="page-header--h1">Johannes Zilg</h1>
-                <h2 class="page-header--h2">Frontend Developer</h2>
-            </div>
+        <header class="page-header">
+            <h1 class="logo">
+                <span class="logo__title">Johannes Zilg</span>
+                <small class="logo__subtitle">Frontend Developer</small>
+            </h1>
             <nav class="menu">
-                <button id="menu-btn" class="menu-btn link" title="Menu">
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                    <span class="sr-only">Menu</span>
+                <button id="menu-btn" class="menu-btn" title="Menu">
+                    <span class="menu-btn__line-wrapper">
+                        <span class="menu-btn__line"></span>
+                        <span class="menu-btn__line"></span>
+                        <span class="menu-btn__line"></span>
+                    </span>
+                    Menu
                 </button>
                 <div id="menu-dropdown" class="menu-dropdown">
                     <ul class="menu-dropdown-list">
@@ -34,42 +35,42 @@
                 </div>
             </nav>
         </header>
-        <main class="page-main">
-            <article id="about" class="content">
-                <div class="row flex-items-md-between">
-                    <div class="col-xs-12 col-md-6 b-space-dbl">
-                        <h3 class="b-space">About me</h3>
-                        <p>
-                            Hi I am Johannes, passionated Frontend Developer from Berlin, Germany.
-                        </p>
-                        <p>
-                            I create web frontend with well structred <strong>HTML</strong>,
-                            responsive <strong>CSS</strong>, high performing, reusable <strong>JavaScript</strong>.
-                        <p>
-                            For my work I use, <strong>Less</strong>/<strong>Sass</strong>, <strong>React</strong>,
-                            <strong>jQuery</strong>, <strong>D3.js</strong>, <strong>webpack</strong>, <strong>Node.js</strong>
-                            and <strong>SVG</strong>.
-                        </p>
-                        <p>
-                            I also know how to use the <strong>Bash shell</strong> and <strong>git</strong>.
-                            As a fan of <a href="https://www.fsf.org/" title="Free Software Foundation" target="_blank">free software</a>,
-                            I love to work on GNU/Linux-Systems with <a href="https://www.gnome.org/" title="GNOME Desktop Environment" target="_blank">Gnome Desktop</a>.
-                        </p>
-                        <p>
-                            Currently I am working for <a href="http://www.dasburo.com" title="Das Büro am Draht - Homepage" target="_blank">Das Büro am Draht</a> in Berlin.
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-md-5">
-                        <img alt="Johannes Zilg" class="portrait-img middle" width="470"
-                            srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
-                            src="./images/jzilg@1.jpg">
-                    </div>
-                </div>
+        <main>
+            <article id="about" class="content about">
+                <section>
+                    <h2>About me</h2>
+                    <p>
+                        Hi I am Johannes, passionated Frontend Developer from Berlin, Germany.
+                    </p>
+                    <p>
+                        I create web frontend with well structred <strong>HTML</strong>,
+                        responsive <strong>CSS</strong>, high performing, reusable <strong>JavaScript</strong>.
+                    <p>
+                        For my work I use, <strong>Less</strong>/<strong>Sass</strong>, <strong>React</strong>,
+                        <strong>jQuery</strong>, <strong>D3.js</strong>, <strong>webpack</strong>, <strong>Node.js</strong>
+                        and <strong>SVG</strong>.
+                    </p>
+                    <p>
+                        I also know how to use the <strong>Bash shell</strong> and <strong>git</strong>.
+                        As a fan of <a href="https://www.fsf.org/" title="Free Software Foundation" target="_blank">free software</a>,
+                        I love to work on GNU/Linux-Systems with <a href="https://www.gnome.org/" title="GNOME Desktop Environment" target="_blank">Gnome Desktop</a>.
+                    </p>
+                    <p>
+                        Currently I am working for <a href="http://www.dasburo.com" title="Das Büro am Draht - Homepage" target="_blank">Das Büro am Draht</a> in Berlin.
+                    </p>
+                </section>
+                <img
+                    src="./images/jzilg@1.jpg"
+                    srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
+                    class="portrait-img"
+                    alt="Johannes Zilg"
+                    width="470"
+                >
             </article>
             <article id="projects" class="content">
-                <h3 class="b-space">Projects</h3>
-                <ul class="projects-container no-style row">
-                    <li class="project-container col-xs-12 col-sm-6 col-lg-3 b-space">
+                <h2>Projects</h2>
+                <ul class="projects-list">
+                    <li>
                         <dl class="project">
                             <dt class="project__title">
                                 <a href="/jquery-modal" class="project__btn" target="_blank">
@@ -82,7 +83,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="project-container col-xs-12 col-sm-6 col-lg-3 b-space">
+                    <li>
                         <dl class="project">
                             <dt class="project__title">
                                 <a href="https://github.com/jzilg/frontend_base" class="project__btn" target="_blank">
@@ -94,7 +95,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="project-container col-xs-12 col-sm-6 col-lg-3 b-space">
+                    <li>
                         <dl class="project">
                             <dt class="project__title">
                                 <a href="https://github.com/jzilg/lazyAttr" class="project__btn" target="_blank">
@@ -109,7 +110,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="project-container col-xs-12 col-sm-6 col-lg-3 b-space">
+                    <li>
                         <dl class="project">
                             <dt class="project__title">
                                 <a href="https://github.com/jzilg/fancy_sidebar" class="project__btn" target="_blank">
@@ -125,7 +126,7 @@
                 </ul>
             </article>
             <article id="contact" class="content">
-                <h3 class="b-space">Contact</h3>
+                <h2>Contact</h2>
                 <ul>
                     <li>
                         <a href="mailto:johannes.zilg@gmail.com" title="Write me an Email">Email</a>
@@ -146,7 +147,7 @@
             </article>
         </main>
         <footer class="page-footer">
-            <span>2018 &middot; Desigend and developed by me with <span class="font-red">&hearts;</span></span>
+            <span>2018 &middot; Desigend and developed by me with <span class="heart">&hearts;</span></span>
             <svg class="html-5-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512" role="img">
                 <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
                 <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
