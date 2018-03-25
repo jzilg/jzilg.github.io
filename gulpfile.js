@@ -13,17 +13,7 @@ const cssDist = 'style/'
 
 gulp.task('css', () => gulp.src(srcFile)
     .pipe(less()).on('error', console.error.bind(console))
-    .pipe(prefix({
-        browsers: [
-            'last 2 versions',
-            'last 2 Android versions',
-            'last 2 ChromeAndroid versions',
-            'last 2 FirefoxAndroid versions',
-            'last 2 iOS versions',
-            '> 5% in DE',
-            'ie >= 10',
-        ]
-    }))
+    .pipe(prefix())
     .pipe(cmq({
         log: false
     }))
