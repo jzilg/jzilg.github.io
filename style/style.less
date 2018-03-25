@@ -101,41 +101,37 @@ img {
 @menu-btn-size: 40px;
 
 .menu-btn__line-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: @menu-btn-size;
     height: @menu-btn-size;
     z-index: 2;
 }
 
-.menu-btn.active {
-    .menu-btn__line {
-        margin-top: -1px;
-        margin-bottom: -1px;
-    }
-    .menu-btn__line:nth-child(1) {
-        transform: rotate(45deg);
-    }
-    .menu-btn__line:nth-child(2) {
-        display: none;
-    }
-    .menu-btn__line:nth-child(3) {
-        transform: rotate(-45deg);
-    }
-}
-
-.menu-btn__line-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .menu-btn__line {
     display: block;
+    position: relative;
     width: 80%;
     margin-top: 4px;
     margin-bottom: 4px;
     border-top: 1px solid #333;
-    transition: transform .2s;
+    transition: transform .2s, opacity .2s;
+}
+
+.menu-btn.active {
+    .menu-btn__line:nth-child(1) {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+    .menu-btn__line:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-btn__line:nth-child(3) {
+        top: -9px;
+        transform: rotate(-45deg);
+    }
 }
 
 .menu-dropdown {
