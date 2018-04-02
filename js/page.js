@@ -11,8 +11,9 @@
     function init() {
         if (window.location.hash === '') {
             window.location.hash = initHastag;
-            window.scrollTo(0, 0);
-            $('html, body').scrollTop(0);
+            $(function() {
+                window.scrollTo(0, 0);
+            });
         }
         toggleContent(window.location.hash, 0);
         bindMenu();
