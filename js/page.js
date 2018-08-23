@@ -1,75 +1,68 @@
 (function() {
-    'use strict';
+    'use strict'
 
-    var $document = $(document);
-    var $menuDropdown = $('#menu-dropdown');
-    var $menuBtn = $('#menu-btn');
-    var $contents = $('.content');
-    var initHastag = $contents.first().attr('id');
-    var menuIsActive = false;
+    const $document = $(document)
+    const $menuBtn = $('#menu-btn')
+    const $menuDropdown = $('#menu-dropdown')
+    const $menuLinks = $menuDropdown.find('.menu-link')
+    const initHastag = window.location.hash
+    let menuIsActive = false
 
     function init() {
-        if (window.location.hash === '') {
-            window.location.hash = initHastag;
-            $(function() {
-                window.scrollTo(0, 0);
-            });
-        }
-        toggleContent(window.location.hash, 0);
-        bindMenu();
-        bindMenuLinks();
+        bindMenu()
+        bindMenuLinks()
+        addMenuLinkActive(initHastag)
     }
 
     function bindMenuLinks() {
-        $menuDropdown.on('click', '.menu-link', menuLinkClickHandler);
+        $menuDropdown.on('click', '.menu-link', menuLinkClickHandler)
     }
 
     function menuLinkClickHandler(event) {
-        event.preventDefault();
-        var targetHashtag = event.target.hash;
-
-        if (targetHashtag !== window.location.hash) {
-            window.location.hash = targetHashtag;
-            toggleContent(targetHashtag);
-            toggleDropdown();
-        }
-    }
-
-    function toggleContent(hashtag, duration) {
-        $contents.fadeOut(duration).promise().done(function() {
-            $(hashtag).fadeIn(duration);
-        });
+        const targetHashtag = event.target.hash
+        toggleDropdown()
+        addMenuLinkActive(targetHashtag)
     }
 
     function bindMenu() {
-        $menuBtn.on('click', toggleDropdown);
+        $menuBtn.on('click', toggleDropdown)
     }
 
     function toggleDropdown() {
-        $menuBtn.toggleClass('active');
-        $menuDropdown.toggle();
+        $menuBtn.toggleClass('active')
+        $menuDropdown.toggle()
 
         if (!menuIsActive) {
-            bindDropdownOutsideClick();
+            bindDropdownOutsideClick()
         } else {
-            unbindDropdownOutsideClick();
+            unbindDropdownOutsideClick()
         }
 
-        menuIsActive = !menuIsActive ? true : false;
+        menuIsActive = !menuIsActive
     }
 
     function bindDropdownOutsideClick() {
-        $document.on('click.dropdownToggle', dropdownOutsideClickHanlder);
+        $document.on('click.dropdownToggle', dropdownOutsideClickHanlder)
     }
 
     function unbindDropdownOutsideClick() {
-        $document.off('click.dropdownToggle');
+        $document.off('click.dropdownToggle')
     }
 
     function dropdownOutsideClickHanlder(event) {
-        if (!menuIsActive || $(event.target).closest('.menu').length) return;
-        toggleDropdown();
+        if (!menuIsActive || $(event.target).closest('.menu').length) {
+            return
+        }
+        toggleDropdown()
     }
 
-    init();
-})();
+    function addMenuLinkActive(hashtag) {
+        const $menuLinkToSetActive = $menuLinks
+            .filter((index, menuLink) => menuLink.hash === hashtag)
+        const $activeMenuLink = $menuDropdown.find('.active')
+        $activeMenuLink.removeClass('active')
+        $menuLinkToSetActive.addClass('active')
+    }
+
+    init()
+})()
