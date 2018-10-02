@@ -1,21 +1,17 @@
-# Created by .gitignore support plugin (hsz.mobi)
+# macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
 
-# Dependency directory
-# Commenting this out is preferred by some people, see
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules
-vendor
-composer.lock
+# Eclipse
+.classpath
+.project
+.settings/
 
-# Users Environment Variables
-.lock-wscript
-
-# IntelliJ/Webstorm/...
-.idea
+# JetBrains
 *.iml
-/.settings/
-/.project
-/.buildpath
+.idea/
 
-# Apple stuff
-.DS_Store
+# npm
+node_modules/
+npm-debug.log*
