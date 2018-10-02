@@ -25,7 +25,7 @@ body {
 h2 {
     font-size: 2em;
     border-bottom: 1px solid #ccc;
-    padding-bottom: .33em;
+    padding-bottom: .25em;
 }
 
 a {
@@ -38,7 +38,6 @@ a {
 }
 
 button {
-    outline: 0;
     font-family: inherit;
     color: inherit;
     cursor: pointer;
@@ -80,7 +79,7 @@ img {
 .logo__title {
     font-size: 1.25em;
 
-    @media @sm {
+    @media @md {
         font-size: 2em;
     }
 }
@@ -88,6 +87,10 @@ img {
 .logo__subtitle {
     display: block;
     color: #aaa;
+
+    @media @md {
+        font-size: 1.25em;
+    }
 }
 
 .menu {
@@ -206,7 +209,7 @@ img {
 
 .about {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 2.5em;
 
     @media @md {
         grid-template-columns: 1fr 1fr;
@@ -222,6 +225,7 @@ img {
     display: block;
     border-radius: 100%;
     justify-self: center;
+    align-self: center;
 
     @media @md {
         justify-self: end;
