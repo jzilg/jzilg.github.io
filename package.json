@@ -1,6 +1,9 @@
 {
     "name": "jzilg.github.io",
     "version": "2.1.0",
+    "scripts": {
+        "gulp": "gulp"
+    },
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-preset-env": "^1.7.0",
