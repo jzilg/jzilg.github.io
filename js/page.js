@@ -30,7 +30,7 @@
 
     function toggleDropdown() {
         $menuBtn.toggleClass('active')
-        $menuDropdown.toggle()
+        $menuDropdown.fadeToggle(200)
 
         if (!menuIsActive) {
             bindDropdownOutsideClick()
