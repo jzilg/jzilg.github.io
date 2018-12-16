@@ -57,8 +57,9 @@
     }
 
     function addMenuLinkActive(hashtag) {
-        const $menuLinkToSetActive = $menuLinks
-            .filter((index, menuLink) => menuLink.hash === hashtag)
+        const $menuLinkToSetActive = $menuLinks.filter(
+            (index, menuLink) => menuLink.hash === hashtag
+        )
         const $activeMenuLink = $menuDropdown.find('.active')
         $activeMenuLink.removeClass('active')
         $menuLinkToSetActive.addClass('active')
