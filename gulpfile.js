@@ -34,7 +34,7 @@ const jsDist = 'js/'
 
 gulp.task('js', () => gulp.src(jsSrcFile)
     .pipe(babel({
-        presets: ['env']
+        presets: ['@babel/preset-env']
     }))
     .pipe(uglifyJS())
     .pipe(rename({
