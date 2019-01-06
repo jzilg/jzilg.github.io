@@ -10,163 +10,159 @@
     <link rel="stylesheet" href="./style/style.min.css">
 </head>
 <body>
-    <div class="container">
-        <header class="page-header">
-            <h1 class="logo">
-                <span class="logo__title">Johannes Zilg</span>
-                <small class="logo__subtitle">Frontend Developer</small>
-            </h1>
-            <nav class="menu">
-                <button id="menu-btn" class="menu-btn" title="Menu">
-                    <span class="menu-btn__line-wrapper">
-                        <span class="menu-btn__line"></span>
-                        <span class="menu-btn__line"></span>
-                        <span class="menu-btn__line"></span>
-                    </span>
-                    Menu
-                </button>
-                <div id="menu-dropdown" class="menu-dropdown">
-                    <ul class="menu-dropdown-list">
-                        <li><a href="#about" class="menu-link">About</a></li>
-                        <li><a href="#projects" class="menu-link">Github Projects</a></li>
-                        <li><a href="#contact" class="menu-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <article class="about">
-                <div>
-                    <h2 id="about">About me</h2>
-                    <p>
-                        Hi I am Johannes, passionated Frontend Developer, born and raised in Berlin, Germany.
-                    </p>
-                    <p>
-                        I create web frontend with well structred <strong>HTML</strong>,
-                        responsive <strong>CSS</strong> and reusable <strong>JavaScript</strong>.
-                    </p>
-                    <p>
-                        For my work I use <strong>React</strong>, <strong>Redux</strong>,
-                        <strong>Vue.js</strong>, <strong>jQuery</strong>, <strong>lodash</strong>,
-                        <strong>D3.js</strong>, <strong>webpack</strong>, <strong>Node.js</strong>,
-                        <strong>Less</strong>, <strong>Sass</strong>, <strong>SVG</strong>, etc.
-                        I also know how to use <strong>Bash shell</strong> and <strong>git</strong>.
-                    </p>
-                    <p>
-                        I like to work on a Unix-like operating system like MacOS but
-                        as a fan of <a href="https://www.fsf.org/" title="Free Software Foundation" target="_blank">free software</a>,
-                        I am also using GNU/Linux systems with the <a href="https://www.gnome.org/" title="GNOME Desktop Environment" target="_blank">Gnome Desktop</a>.
-                    </p>
-                    <p>
-                        Currently I am working for <a href="http://www.dasburo.com" title="Das Büro am Draht - Homepage" target="_blank">Das Büro am Draht</a> in Berlin.
-                    </p>
-                </div>
-                <img
-                    src="./images/jzilg@1.jpg"
-                    srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
-                    class="portrait-img"
-                    alt="Johannes Zilg"
-                    width="470"
-                >
-            </article>
-            <article>
-                <h2 id="projects">Projects</h2>
-                <ul class="projects-list">
-                    <li>
-                        <dl class="project">
-                            <dt>
-                                <a href="https://github.com/jzilg/react-redux-todo-list" class="project__btn" target="_blank">
-                                    <strong>React/Redux Todo List</strong>
-                                </a>
-                            </dt>
-                            <dd>
-                                React/Redux list for managing recurring todo's.
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="project">
-                            <dt>
-                                <a href="https://github.com/jzilg/vue-vuex-todo-list" class="project__btn" target="_blank">
-                                    <strong>Vue/Vuex Todo List</strong>
-                                </a>
-                            </dt>
-                            <dd>
-                                Vue/Vuex list for managing recurring todo's.
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="project">
-                            <dt>
-                                <a href="https://github.com/jzilg/embellish.css" class="project__btn" target="_blank">
-                                    <strong>embellish.css</strong>
-                                </a>
-                            </dt>
-                            <dd>
-                                CSS File that beautifies your HTML with element selectors only.
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="project">
-                            <dt class="project__title">
-                                <a href="/jquery-modal" class="project__btn" target="_blank">
-                                    <strong>jQuery-Modal</strong>
-                                </a>
-                            </dt>
-                            <dd class="project__discription">
-                                A full responsive, easy-to-use modal plugin based on jQuery.
-                                Optimized for mobile browsers, including Apple Safari.
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="project">
-                            <dt class="project__title">
-                                <a href="https://github.com/jzilg/fancy_sidebar" class="project__btn" target="_blank">
-                                    <strong>Fancy Sidebar</strong>
-                                </a>
-                            </dt>
-                            <dd class="project__discription">
-                                A modern sidebar with integrated navigation with seperate
-                                toggle buttons.
-                            </dd>
-                        </dl>
-                    </li>
+    <header class="page-header">
+        <nav class="menu">
+            <button id="menu-btn" class="menu-btn" title="Menu">
+                <span class="menu-btn__line-wrapper">
+                    <span class="menu-btn__line"></span>
+                    <span class="menu-btn__line"></span>
+                    <span class="menu-btn__line"></span>
+                </span>
+                Menu
+            </button>
+            <div id="menu-dropdown" class="menu-dropdown">
+                <ul class="menu-dropdown-list">
+                    <li><a href="#about" class="menu-link">About</a></li>
+                    <li><a href="#projects" class="menu-link">Github Projects</a></li>
+                    <li><a href="#contact" class="menu-link">Contact</a></li>
                 </ul>
-            </article>
-            <article>
-                <h2 id="contact">Contact</h2>
-                <ul>
-                    <li>
-                        <a href="mailto:johannes.zilg@gmail.com" title="Write me an Email">Email</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/jzilg" title="See my work at GitHub" target="_blank">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="http://codepen.io/jzilg" title="See my work at Codepen" target="_blank">Codepen</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/johannes-zilg" title="See my LinkedIn-Profile" target="_blank">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="https://www.xing.com/profile/Johannes_Zilg" title="See my Xing-Profile" target="_blank">Xing</a>
-                    </li>
-                </ul>
-            </article>
-        </main>
-        <footer class="page-footer">
-            <span>2019 &middot; Designed and developed by me with <span class="heart">&hearts;</span></span>
-            <svg class="html-5-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512" role="img">
-                <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
-                <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
-                <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
-                <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
-            </svg>
-        </footer>
-    </div>
+            </div>
+        </nav>
+        <h1 class="logo">
+            <span class="logo__title">Johannes Zilg</span>
+            <small class="logo__subtitle">Frontend Developer</small>
+        </h1>
+        <img
+            src="./images/jzilg@1.jpg"
+            srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
+            class="portrait-img"
+            alt="Johannes Zilg"
+            width="470"
+        >
+    </header>
+    <main>
+        <article class="content">
+            <h2 id="about">About me</h2>
+            <p>
+                Hi I am Johannes, passionated Frontend Developer, born and raised in Berlin, Germany.
+            </p>
+            <p>
+                I create web frontend with well structred <strong>HTML</strong>,
+                responsive <strong>CSS</strong> and reusable <strong>JavaScript</strong>.
+            </p>
+            <p>
+                For my work I use <strong>React</strong>, <strong>Redux</strong>,
+                <strong>Vue.js</strong>, <strong>jQuery</strong>, <strong>lodash</strong>,
+                <strong>D3.js</strong>, <strong>webpack</strong>, <strong>Node.js</strong>,
+                <strong>Less</strong>, <strong>Sass</strong>, <strong>SVG</strong>, etc.
+                I also know how to use <strong>Bash shell</strong> and <strong>git</strong>.
+            </p>
+            <p>
+                I like to work on a Unix-like operating system like MacOS but
+                as a fan of <a href="https://www.fsf.org/" title="Free Software Foundation" target="_blank">free software</a>,
+                I am also using GNU/Linux systems with the <a href="https://www.gnome.org/" title="GNOME Desktop Environment" target="_blank">Gnome Desktop</a>.
+            </p>
+            <p>
+                Currently I am working for <a href="http://www.dasburo.com" title="Das Büro am Draht - Homepage" target="_blank">Das Büro am Draht</a> in Berlin.
+            </p>
+        </article>
+        <article class="content">
+            <h2 id="projects">Projects</h2>
+            <ul class="projects-list">
+                <li>
+                    <dl class="project">
+                        <dt>
+                            <a href="https://github.com/jzilg/react-redux-todo-list" class="project__btn" target="_blank">
+                                <strong>React/Redux Todo List</strong>
+                            </a>
+                        </dt>
+                        <dd>
+                            React/Redux list for managing recurring todo's.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="project">
+                        <dt>
+                            <a href="https://github.com/jzilg/vue-vuex-todo-list" class="project__btn" target="_blank">
+                                <strong>Vue/Vuex Todo List</strong>
+                            </a>
+                        </dt>
+                        <dd>
+                            Vue/Vuex list for managing recurring todo's.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="project">
+                        <dt>
+                            <a href="https://github.com/jzilg/embellish.css" class="project__btn" target="_blank">
+                                <strong>embellish.css</strong>
+                            </a>
+                        </dt>
+                        <dd>
+                            CSS File that beautifies your HTML with element selectors only.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="/jquery-modal" class="project__btn" target="_blank">
+                                <strong>jQuery-Modal</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            A full responsive, easy-to-use modal plugin based on jQuery.
+                            Optimized for mobile browsers, including Apple Safari.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="project">
+                        <dt class="project__title">
+                            <a href="https://github.com/jzilg/fancy_sidebar" class="project__btn" target="_blank">
+                                <strong>Fancy Sidebar</strong>
+                            </a>
+                        </dt>
+                        <dd class="project__discription">
+                            A modern sidebar with integrated navigation with seperate
+                            toggle buttons.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </article>
+        <article class="content">
+            <h2 id="contact">Contact</h2>
+            <ul>
+                <li>
+                    <a href="mailto:johannes.zilg@gmail.com" title="Write me an Email">Email</a>
+                </li>
+                <li>
+                    <a href="https://github.com/jzilg" title="See my work at GitHub" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="http://codepen.io/jzilg" title="See my work at Codepen" target="_blank">Codepen</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/johannes-zilg" title="See my LinkedIn-Profile" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://www.xing.com/profile/Johannes_Zilg" title="See my Xing-Profile" target="_blank">Xing</a>
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer class="page-footer content">
+        <span>2019 &middot; Designed and developed by me with <span class="heart">&hearts;</span></span>
+        <svg class="html-5-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512" role="img">
+            <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
+            <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
+            <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+            <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+        </svg>
+    </footer>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/page.min.js" async></script>
     <script type="application/ld+json">
