@@ -62,6 +62,21 @@
             url: 'https://jquery.com/',
         },
         {
+            filename: 'jest',
+            title: 'Jest',
+            url: 'https://jestjs.io/',
+        },
+        {
+            filename: 'eslint',
+            title: 'Eslint',
+            url: 'https://eslint.org/',
+        },
+        {
+            filename: 'stylelint',
+            title: 'Stylelint',
+            url: 'https://stylelint.io/',
+        },
+        {
             filename: 'webpack',
             title: 'webpack',
             url: 'https://webpack.js.org/',
@@ -72,9 +87,24 @@
             url: 'https://gulpjs.com/',
         },
         {
+            filename: 'babel',
+            title: 'Babel',
+            url: 'https://babeljs.io/',
+        },
+        {
             filename: 'svg',
             title: 'SVG',
             url: 'https://www.w3.org/Graphics/SVG/',
+        },
+        {
+            filename: 'json',
+            title: 'JSON',
+            url: 'https://json.org/',
+        },
+        {
+            filename: 'json-schema',
+            title: 'JSON Schema',
+            url: 'https://json-schema.org/',
         },
         {
             filename: 'bash',
@@ -90,7 +120,7 @@
             filename: 'jetbrains',
             title: 'JetBrains IDE',
             url: 'https://www.jetbrains.com/',
-        }
+        },
     ]
 
     const skillList = document.getElementById('skill-list')
