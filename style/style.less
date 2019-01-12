@@ -236,12 +236,14 @@ img {
     display: grid;
     grid-auto-rows: 100px;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em 4em;
+    grid-row-gap: 1em;
+    grid-column-gap: 3em;
     padding-left: 0;
     list-style: none;
 
     @media @md {
         grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 4em;
     }
 }
 
