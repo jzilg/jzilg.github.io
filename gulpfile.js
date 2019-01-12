@@ -29,10 +29,13 @@ gulp.task('css', () => gulp.src(cssSrcFile)
 /* Minify JS
 ==============================================================================*/
 
-const jsSrcFile = 'js/page.js'
+const jsSrcFiles = [
+    'js/page.js',
+    'js/skill-list.js',
+]
 const jsDist = 'js/'
 
-gulp.task('js', () => gulp.src(jsSrcFile)
+gulp.task('js', () => gulp.src(jsSrcFiles)
     .pipe(babel({
         presets: ['@babel/preset-env']
     }))
@@ -47,5 +50,5 @@ gulp.task('js', () => gulp.src(jsSrcFile)
 
 gulp.task('watch', () => {
     gulp.watch(cssSrcFile, gulp.series('css'))
-    gulp.watch(jsSrcFile, gulp.series('js'))
+    gulp.watch(jsSrcFiles, gulp.series('js'))
 })
