@@ -4,212 +4,36 @@
     <meta charset="UTF-8">
     <title>Johannes Zilg &middot; Front-End Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="./images/favicons/favicon-32.png" sizes="32x32">
-    <link rel="icon" href="./images/favicons/favicon-57.png" sizes="57x57">
-    <link rel="icon" href="./images/favicons/favicon-76.png" sizes="76x76">
-    <link rel="icon" href="./images/favicons/favicon-192.png" sizes="192x192">
-    <link rel="shortcut icon" href="./images/favicons/favicon-196.png" sizes="196x196">
-    <link rel="apple-touch-icon" href="./images/favicons/favicon-120.png" sizes="120x120">
-    <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="path/to/favicon-167.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+    <meta name="description" content="Website of Johannes Zilg, front-end developer from Berlin, Germany. I build web front-end build with HTML, CSS, JavaScript, SVG, Bash and git.">
+    <link rel="icon" href="assets/images/favicons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/images/favicons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="assets/images/favicons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="assets/images/favicons/favicon-192.png" sizes="192x192">
+    <link rel="shortcut icon" href="assets/images/favicons/favicon-196.png" sizes="196x196">
+    <link rel="apple-touch-icon" href="assets/images/favicons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="assets/images/favicons/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="assets/images/favicons/favicon-167.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="assets/images/favicons/favicon-180.png" sizes="180x180">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <base target="_blank">
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-			font-family: -apple-system, sans-serif;
-			font-size: calc(16px + .3vw);
-			margin: 10vh 10vw;
-            line-height: 1.4;
-        }
-
-        body.light {
-            color: #333;
-            --link-color: #333;
-        }
-
-        body.dark {
-            background-color: #282c35;
-            color: #fff;
-            --link-color: #fff;
-            --link-hover: #000;
-        }
-
-        h1,
-        h2,
-        a,
-        b,
-        p,
-        li {
-            transition: background-color .2s, color .2s;
-        }
-
-        img {
-            border-radius: 100%;
-            max-width: 100%;
-        }
-
-        h1 {
-            margin-top: 0;
-			font-size: 2.5em;
-		}
-
-		h2 {
-			margin-top: 2em;
-        }
-
-		a {
-			position: relative;
-			text-decoration: none;
-			color: var(--link-color);
-            white-space: nowrap;
-            outline: 0;
-        }
-
-        a::after {
-			content: "";
-            position: absolute;
-			bottom: 0;
-			right: -.1em;
-			left: -.1em;
-            height: 3px;
-			background-color: gold;
-			z-index: -1;
-			transition: height .2s;
-		}
-
-		a:visited::after {
-			background-color: #e0ab37;
-		}
-
-        a:hover,
-        a:focus {
-            color: var(--link-hover);
-        }
-
-        a:hover::after,
-        a:focus::after {
-            height: 100%;
-		}
-
-		a:active::after {
-			border: 1px dotted #333;
-        }
-
-        .toggle-theme-checkbox {
-            position: fixed;
-            top: 10vh;
-            right: 10vw;
-            width: 2.5em;
-            height: 1.125em;
-            margin: 0;
-            border-radius: 10em;
-            background-color: #000;
-            font-size: inherit;
-            line-height: 1.125em;
-            cursor: pointer;
-            outline: none;
-            transition: background-color .2s;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-        }
-
-        .toggle-theme-checkbox::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            width: calc(1.125em - 2px);
-            height: calc(1.125em - 2px);
-            background-color: white;
-            border-radius: 100%;
-            transition: transform .2s, box-shadow .2s;
-        }
-
-        .toggle-theme-checkbox:checked::before {
-            transform: translateX(calc(100% + .25em + 2px));
-        }
-
-        .toggle-theme-checkbox:focus::before {
-            box-shadow: 0 0 .063em .125em #e0ab37;
-        }
-
-        .toggle-theme-checkbox::after {
-            display: flex;
-            padding-right: .5em;
-            padding-left: .5em;
-            justify-content: flex-end;
-            font-size: .75em;
-            content: "☀️";
-        }
-
-        .toggle-theme-checkbox:checked:after {
-            justify-content: flex-start;
-            content: "🌙";
-        }
-
-        .work-list {
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .work-list-item + .work-list-item {
-            margin-top: 1em;
-        }
-
-        @media only screen and (min-width: 480px) {
-            .about-container {
-                display: grid;
-                grid-column-gap: 4em;
-                grid-template-columns: 1fr .6fr;
-                align-items: center;
-            }
-
-            .about-container figure {
-                order: 2;
-                justify-self: center;
-            }
-        }
-
-        figure {
-            margin: 0;
-        }
-
-        footer {
-            margin-top: 2em;
-        }
-
-        .heart {
-            color: firebrick;
-        }
-    </style>
 </head>
 <body class="light">
     <main>
-        <input
-            id="toggle-theme-checkbox"
-            class="toggle-theme-checkbox"
-            title="Toggle Theme"
-            type="checkbox"
-        >
+        <div class="toggle-theme-checkbox-wrapper">
+            <input
+                id="toggle-theme-checkbox"
+                class="toggle-theme-checkbox"
+                title="Toggle Theme"
+                type="checkbox"
+            >
+        </div>
         <article>
             <h1>Johannes Zilg</h1>
             <div class="about-container">
                 <figure>
                     <img
-                        src="./images/jzilg@1.jpg"
-                        srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
+                        src="assets/images/jzilg@1.jpg"
+                        srcset="assets/images/jzilg@1.jpg 1x, assets/images/jzilg@2.jpg 2x"
                         class="portrait-img"
                         alt="Johannes Zilg"
                     >
@@ -289,6 +113,6 @@
     <footer class="page-footer content">
         <span>2019 &middot; Designed and developed by me with <span class="heart">&hearts;</span></span>
     </footer>
-    <script src="./js/toggle-theme.js"></script>
+    <script src="assets/js/toggle-theme.min.js"></script>
 </body>
 </html>
