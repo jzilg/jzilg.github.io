@@ -2,184 +2,295 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Johannes Zilg &middot; Front-End Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Homepage of Johannes Zilg. Front-end Developer from Berlin, Germany. Modern web front-end build with HTML, CSS, JavaScript, SVG, Bash and git.">
-    <link rel="icon" href="./images/favicon.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="./style/style.min.css">
+    <link rel="icon" href="./images/favicons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="./images/favicons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="./images/favicons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="./images/favicons/favicon-192.png" sizes="192x192">
+    <link rel="shortcut icon" href="./images/favicons/favicon-196.png" sizes="196x196">
+    <link rel="apple-touch-icon" href="./images/favicons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="path/to/favicon-167.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+    <base target="_blank">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+			font-family: -apple-system, sans-serif;
+			font-size: calc(16px + .3vw);
+			margin: 10vh 10vw;
+            line-height: 1.4;
+        }
+
+        body.light {
+            color: #333;
+            --link-color: #333;
+        }
+
+        body.dark {
+            background-color: #282c35;
+            color: #fff;
+            --link-color: #fff;
+            --link-hover: #000;
+        }
+
+        h1,
+        h2,
+        a,
+        b,
+        p,
+        li {
+            transition: background-color .2s, color .2s;
+        }
+
+        img {
+            border-radius: 100%;
+            max-width: 100%;
+        }
+
+        h1 {
+            margin-top: 0;
+			font-size: 2.5em;
+		}
+
+		h2 {
+			margin-top: 2em;
+        }
+
+		a {
+			position: relative;
+			text-decoration: none;
+			color: var(--link-color);
+            white-space: nowrap;
+            outline: 0;
+        }
+
+        a::after {
+			content: "";
+            position: absolute;
+			bottom: 0;
+			right: -.1em;
+			left: -.1em;
+            height: 3px;
+			background-color: gold;
+			z-index: -1;
+			transition: height .2s;
+		}
+
+		a:visited::after {
+			background-color: #e0ab37;
+		}
+
+        a:hover,
+        a:focus {
+            color: var(--link-hover);
+        }
+
+        a:hover::after,
+        a:focus::after {
+            height: 100%;
+		}
+
+		a:active::after {
+			border: 1px dotted #333;
+        }
+
+        .toggle-theme-checkbox {
+            position: fixed;
+            top: 10vh;
+            right: 10vw;
+            width: 2.5em;
+            height: 1.125em;
+            margin: 0;
+            border-radius: 10em;
+            background-color: #000;
+            font-size: inherit;
+            line-height: 1.125em;
+            cursor: pointer;
+            outline: none;
+            transition: background-color .2s;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .toggle-theme-checkbox::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: calc(1.125em - 2px);
+            height: calc(1.125em - 2px);
+            background-color: white;
+            border-radius: 100%;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .toggle-theme-checkbox:checked::before {
+            transform: translateX(calc(100% + .25em + 2px));
+        }
+
+        .toggle-theme-checkbox:focus::before {
+            box-shadow: 0 0 .063em .125em #e0ab37;
+        }
+
+        .toggle-theme-checkbox::after {
+            display: flex;
+            padding-right: .5em;
+            padding-left: .5em;
+            justify-content: flex-end;
+            font-size: .75em;
+            content: "☀️";
+        }
+
+        .toggle-theme-checkbox:checked:after {
+            justify-content: flex-start;
+            content: "🌙";
+        }
+
+        .work-list {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .work-list-item + .work-list-item {
+            margin-top: 1em;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .about-container {
+                display: grid;
+                grid-column-gap: 50px;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            .about-container figure {
+                order: 2;
+                justify-self: center;
+            }
+        }
+
+        figure {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        footer {
+            margin-top: 2em;
+        }
+
+        .heart {
+            color: firebrick;
+        }
+    </style>
 </head>
-<body>
-    <header class="page-header">
-        <nav class="menu">
-            <button id="menu-btn" class="menu-btn" title="Menu">
-                <span class="menu-btn__line-wrapper">
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                </span>
-                Menu
-            </button>
-            <div id="menu-dropdown" class="menu-dropdown">
-                <ul class="menu-dropdown-list">
-                    <li><a href="#about" class="menu-link">About</a></li>
-                    <li><a href="#skills" class="menu-link">Skills</a></li>
-                    <li><a href="#projects" class="menu-link">Github Projects</a></li>
-                    <li><a href="#contact" class="menu-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <h1 class="logo">
-            <span class="logo__title">Johannes Zilg</span>
-            <small class="logo__subtitle">Front-End Developer</small>
-        </h1>
-        <img
-            src="./images/jzilg@1.jpg"
-            srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
-            class="portrait-img"
-            alt="Johannes Zilg"
-            width="470"
-        >
-    </header>
+<body class="light">
     <main>
-        <article class="content">
-            <h2 id="about">About me</h2>
-            <p>
-                Hi I am Johannes, passionated front-end developer, born and raised in Berlin, Germany.
-            </p>
-            <p>
-                I create web front end with well structured <strong>HTML</strong>,
-                responsive <strong>CSS</strong> and reusable <strong>JavaScript</strong>.
-            </p>
-            <p>
-                For my work I use <strong>React</strong>, <strong>Redux</strong>,
-                <strong>Vue.js</strong>, <strong>jQuery</strong>, <strong>lodash</strong>,
-                <strong>D3.js</strong>, <strong>webpack</strong>, <strong>Node.js</strong>,
-                <strong>Less</strong>, <strong>Sass</strong>, <strong>SVG</strong>, etc.
-                I also know how to use <strong>Bash shell</strong> and <strong>git</strong>.
-            </p>
-            <p>
-                I like to work on a Unix-like operating system like MacOS but
-                as a fan of <a href="https://www.fsf.org/" title="Free Software Foundation" target="_blank">free software</a>,
-                I am also using GNU/Linux systems with the <a href="https://www.gnome.org/" title="GNOME Desktop Environment" target="_blank">Gnome Desktop</a>.
-            </p>
-            <p>
-                Currently I am working for <a href="http://www.dasburo.com" title="Das Büro am Draht - Homepage" target="_blank">Das Büro am Draht</a> in Berlin.
-            </p>
+        <input
+            id="toggle-theme-checkbox"
+            class="toggle-theme-checkbox"
+            title="Toggle Theme"
+            type="checkbox"
+        >
+        <article>
+            <h1>Johannes Zilg</h1>
+            <div class="about-container">
+                <figure>
+                    <img
+                        src="./images/jzilg@1.jpg"
+                        srcset="./images/jzilg@1.jpg 1x, ./images/jzilg@2.jpg 2x"
+                        class="portrait-img"
+                        alt="Johannes Zilg"
+                        width="380"
+                    >
+                </figure>
+                <div>
+                    <p>
+                        Hi I am Johannes, passionated front-end developer, born and raised in Berlin, Germany.
+                    </p>
+                    <p>
+                        I create user interfaces for enterprise web applications. So my main principle
+                        is code quality by means of structure, readability and testing.
+                    </p>
+                    <p>
+                        Currently I am working for
+                        <a href="https://www.dasburo.com" title="Das Büro am Draht GmbH">Das Büro am Draht</a>
+                        in Berlin.
+                    </p>
+                    <p>
+                        As a fan of
+                        <a href="https://www.fsf.org" title="Free Software Foundation">free software</a>
+                        I like organisations like
+                        <a href="https://www.mozilla.org" title="Mozilla">Mozilla</a>
+                        ,
+                        <a href="https://www.gnome.org" title="GNOME Desktop Environment">Gnome</a>
+                        or
+                        <a href="https://www.okuna.io" title="Okuna">Okuna</a>
+                        .
+                    </p>
+                    <p>
+                        Besides my love for programming I am a movie and music enthusiast.
+                        I play the drums and the guitar.
+                    </p>
+                </div>
+            </div>
         </article>
-        <article class="content">
-            <h2 id="skills">Skills</h2>
-            <ul id="skill-list" class="skill-list"></ul>
-        </article>
-        <article class="content">
-            <h2 id="projects">Projects</h2>
-            <ul class="projects-list">
-                <li>
-                    <dl class="project">
-                        <dt>
-                            <a href="https://github.com/jzilg/react-redux-todo-list" class="project__btn" target="_blank">
-                                <strong>React/Redux Todo List</strong>
-                            </a>
-                        </dt>
-                        <dd>
-                            React/Redux list for managing recurring todo's.
-                        </dd>
-                    </dl>
+        <section>
+            <h2>Work</h2>
+            <ul class="work-list">
+                <li class="work-list-item">
+                    <b><a href="https://github.com/jzilg/embellish.css">embelish.css</a></b>
+                    <br>
+                    CSS File that beautifies your HTML with element selectors only.
                 </li>
-                <li>
-                    <dl class="project">
-                        <dt>
-                            <a href="https://github.com/jzilg/vue-vuex-todo-list" class="project__btn" target="_blank">
-                                <strong>Vue/Vuex Todo List</strong>
-                            </a>
-                        </dt>
-                        <dd>
-                            Vue/Vuex list for managing recurring todo's.
-                        </dd>
-                    </dl>
+                <li class="work-list-item">
+                    <b><a href="https://github.com/jzilg/concert-diary">Concert Diary</a></b>
+                    <br>
+                    React/Redux App to keep track of your visited concerts.
                 </li>
-                <li>
-                    <dl class="project">
-                        <dt>
-                            <a href="https://github.com/jzilg/embellish.css" class="project__btn" target="_blank">
-                                <strong>embellish.css</strong>
-                            </a>
-                        </dt>
-                        <dd>
-                            CSS File that beautifies your HTML with element selectors only.
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl class="project">
-                        <dt class="project__title">
-                            <a href="/jquery-modal" class="project__btn" target="_blank">
-                                <strong>jQuery-Modal</strong>
-                            </a>
-                        </dt>
-                        <dd class="project__discription">
-                            A full responsive, easy-to-use modal plugin based on jQuery.
-                            Optimized for mobile browsers, including Apple Safari.
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl class="project">
-                        <dt class="project__title">
-                            <a href="https://github.com/jzilg/fancy_sidebar" class="project__btn" target="_blank">
-                                <strong>Fancy Sidebar</strong>
-                            </a>
-                        </dt>
-                        <dd class="project__discription">
-                            A modern sidebar with integrated navigation with seperate
-                            toggle buttons.
-                        </dd>
-                    </dl>
+                <li class="work-list-item">
+                    <b><a href="https://codepen.io/jzilg/pen/orLPxP">Most simple SVG Icons</a></b>
+                    <br>
+                    A collection of handwritten SVG's, extreme lightweight, easy to use and customize.
                 </li>
             </ul>
-        </article>
-        <article class="content">
-            <h2 id="contact">Contact</h2>
+        </section>
+        <section>
+            <h2>Contact</h2>
             <ul>
                 <li>
                     <a href="mailto:mail@jzilg.de" title="Write me an Email">Email</a>
                 </li>
                 <li>
-                    <a href="https://github.com/jzilg" title="See my work at GitHub" target="_blank">GitHub</a>
+                    <a href="https://github.com/jzilg" title="See my work at GitHub">GitHub</a>
                 </li>
                 <li>
-                    <a href="http://codepen.io/jzilg" title="See my work at Codepen" target="_blank">Codepen</a>
+                    <a href="https://codepen.io/jzilg" title="See my work at Codepen">Codepen</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/johannes-zilg" title="See my LinkedIn-Profile" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/johannes-zilg" title="See my LinkedIn-Profile">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="https://www.xing.com/profile/Johannes_Zilg" title="See my Xing-Profile" target="_blank">Xing</a>
+                    <a href="https://www.xing.com/profile/Johannes_Zilg" title="See my Xing-Profile">Xing</a>
                 </li>
             </ul>
-        </article>
+        </section>
     </main>
     <footer class="page-footer content">
         <span>2019 &middot; Designed and developed by me with <span class="heart">&hearts;</span></span>
     </footer>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/page.min.js" async></script>
-    <script src="./js/skill-list.min.js" async></script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Johannes Zilg",
-            "jobTitle": "Front-End Developer",
-            "email": "mailto:johannes.zilg@gmail.com",
-            "url": "https://jzilg.github.io",
-            "affiliation": "https://www.dasburo.com",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Berlin",
-                "addressRegion": "BE"
-            }
-        }
-    </script>
+    <script src="./js/toggle-theme.js"></script>
 </body>
 </html>
