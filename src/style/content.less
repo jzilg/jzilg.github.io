@@ -1,0 +1,107 @@
+@import '_config.less';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, sans-serif;
+    font-size: calc(16px + .3vw);
+    margin: 10vh 10vw;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+a,
+b,
+p,
+li {
+    transition: background-color .2s, color .2s;
+}
+
+img {
+    border-radius: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: var(--link-color);
+    white-space: nowrap;
+    outline: 0;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -.1em;
+    left: -.1em;
+    height: 3px;
+    background-color: gold;
+    z-index: -1;
+    transition: height .2s;
+}
+
+a:visited::after {
+    background-color: #e0ab37;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+}
+
+a:hover::after,
+a:focus::after {
+    height: 100%;
+}
+
+a:active::after {
+    border: 1px dotted #333;
+}
+
+figure {
+    margin: 0;
+}
+
+@media only screen and (min-width: 480px) {
+    .about-container {
+        display: grid;
+        grid-column-gap: 4em;
+        grid-template-columns: 1fr .6fr;
+        align-items: center;
+    }
+
+    .about-container figure {
+        order: 2;
+        justify-self: center;
+    }
+}
+
+.work-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.work-list-item + .work-list-item {
+    margin-top: 1em;
+}

@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const prefix = require('gulp-autoprefixer')
 const cmq = require('gulp-merge-media-queries')
 const less = require('gulp-less')
+const concat = require('gulp-concat')
 const minifyCSS = require('gulp-cssnano')
 const rename = require('gulp-rename')
 const babel = require('gulp-babel')
@@ -10,15 +11,16 @@ const uglifyJS = require('gulp-uglify')
 /* Less to CSS
 ==============================================================================*/
 
-const cssSrcFile = 'style/style.less'
-const cssDist = 'style/'
+const cssSrcFiles = 'src/style/*.less'
+const cssDist = 'assets/css/'
 
-gulp.task('css', () => gulp.src(cssSrcFile)
+gulp.task('css', () => gulp.src(cssSrcFiles)
     .pipe(less()).on('error', console.error.bind(console))
     .pipe(prefix())
     .pipe(cmq({
         log: false
     }))
+    .pipe(concat('style.css'))
     .pipe(minifyCSS())
     .pipe(rename({
         suffix: '.min',
@@ -29,11 +31,8 @@ gulp.task('css', () => gulp.src(cssSrcFile)
 /* Minify JS
 ==============================================================================*/
 
-const jsSrcFiles = [
-    'js/page.js',
-    'js/skill-list.js',
-]
-const jsDist = 'js/'
+const jsSrcFiles = 'src/js/*.js'
+const jsDist = 'assets/js/'
 
 gulp.task('js', () => gulp.src(jsSrcFiles)
     .pipe(babel({
@@ -43,12 +42,13 @@ gulp.task('js', () => gulp.src(jsSrcFiles)
     .pipe(rename({
         suffix: '.min',
     }))
-    .pipe(gulp.dest(jsDist)))
+    .pipe(gulp.dest(jsDist))
+)
 
 /* Watcher
 ==============================================================================*/
 
 gulp.task('watch', () => {
-    gulp.watch(cssSrcFile, gulp.series('css'))
+    gulp.watch(cssSrcFiles, gulp.series('css'))
     gulp.watch(jsSrcFiles, gulp.series('js'))
 })
