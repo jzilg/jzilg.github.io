@@ -33,8 +33,8 @@
     }
 
     function getTheme() {
-        const persistThemeIsDark = window.localStorage.getItem('themeIsDark')
-        return JSON.parse(persistThemeIsDark)
+        const persistedThemeIsDark = window.localStorage.getItem('themeIsDark')
+        return JSON.parse(persistedThemeIsDark)
     }
 
     main()
