@@ -18,6 +18,13 @@ body {
     line-height: 1.4;
 }
 
+main,
+footer {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(1140px + 10vw);
+}
+
 h1,
 h2,
 a,
@@ -97,7 +104,7 @@ figure {
 
 .about-container {
     display: grid;
-    grid-column-gap: 5vw;
+    grid-column-gap: 1em;
 
     @media @md {
         grid-template-columns: 1fr .6fr;
@@ -105,7 +112,7 @@ figure {
     }
 
     @media @lg {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto max-content;
     }
 }
 
