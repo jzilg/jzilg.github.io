@@ -1,6 +1,12 @@
 @import '_config.less';
 
 .toggle-theme-checkbox-wrapper {
+    --checkbox-height: 24px;
+    --checkbox-width: 50px;
+    --checkbox-padding: 1px;
+    --checkbox-transition: .2s;
+    --checkbox-icon-size: 16px;
+
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -15,10 +21,6 @@
 }
 
 .toggle-theme-checkbox {
-    --checkbox-height: 24px;
-    --checkbox-width: 50px;
-    --checkbox-padding: 1px;
-    --checkbox-transition: .2s;
     position: relative;
     width: var(--checkbox-width);
     height: var(--checkbox-height);
@@ -45,6 +47,7 @@
     background-color: #fff;
     border-radius: 100%;
     transition: transform var(--checkbox-transition), box-shadow var(--checkbox-transition);
+    z-index: 1;
 }
 
 .toggle-theme-checkbox:checked::before {
@@ -55,16 +58,26 @@
     box-shadow: 0 0 2px 4px #e0ab37;
 }
 
-.toggle-theme-checkbox::after {
-    display: flex;
-    padding-right: 6px;
-    padding-left: 6px;
-    justify-content: flex-end;
-    font-size: 12px;
-    content: "☀️";
+.toggle-theme-label {
+    position: relative;
+    display: block;
 }
 
-.toggle-theme-checkbox:checked:after {
-    justify-content: flex-start;
-    content: "🌙";
+.toggle-theme-icon {
+    top: calc((var(--checkbox-height) - var(--checkbox-icon-size)) / 2);
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.toggle-theme-icon-sun {
+    right: 6px;
+}
+
+.toggle-theme-icon-moon {
+    left: 6px;
+}
+
+.toggle-theme-label-text {
+    display: none;
 }
