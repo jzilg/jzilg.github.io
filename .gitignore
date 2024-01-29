@@ -1,17 +1,11 @@
-# macOS
-*.DS_Store
-.AppleDouble
-.LSOverride
+# bun
+node_modules/
 
-# Eclipse
-.classpath
-.project
-.settings/
+# macOS
+.DS_Store
 
 # JetBrains
-*.iml
 .idea/
 
-# npm
-node_modules/
-npm-debug.log*
+# VS Code
+.vscode/
